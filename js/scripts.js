@@ -34,16 +34,15 @@ $(document).ready(function() {
   }
 
   function count(array) {
-    var ul = document.getElementById("list");
     for (var i = 0; i < array.length; i++) {
-      var li = document.createElement("li");
-      li.appendChild(document.createTextNode(array[i]))
-      ul.appendChild(li);
+      $('#list').append('<li>' + array[i] + '</li>');
+      $('#list').children(':last').hide().fadeIn(1000).delay(600);
     }
   }
 
   $('form#numInput').submit(function(event) {
     event.preventDefault();
+    $('#list').empty();
     var input = getInput(input);
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
