@@ -28,10 +28,9 @@ $(document).ready(function() {
         array[i] = "pong";
       } else if (array[i] % 3 === 0) {
         array[i] = "ping";
-      } else {
-        return -1;
       }
     }
+    return array;
   }
 
   function count(array) {
