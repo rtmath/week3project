@@ -8,7 +8,7 @@ $(document).ready(function() {
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
     var speed = parseInt(($('#speedSlider').val()));
-    $('._hidden').fadeIn();
+    $('._hidden').fadeIn().addClass('.list_center');
     if (withinRange(input) === true) {
       createList(pongifiedNumbers);
       $('#output').text(displayCount(pongifiedNumbers));
@@ -24,7 +24,7 @@ function getInput(string) {
 }
 
 function withinRange(number) {
-  if (number > 0 && number <= 1000) {
+  if (number > 0 && number <= 100) {
     return true;
   } else {
     return false;
@@ -63,10 +63,13 @@ function displayCount(array) {
     array[i] = array[i] + "";
       if (array[i] === "pong") {
         $('li').eq(i).text(array[i]).addClass("text_pong");
+        $('li').eq(i).addClass("move_right");
       } else if  (array[i] === "ping") {
-        $('li').eq(i).text(array[i]).addClass("text_ping");
+        $('li').eq(i).text(array[i]);
+        $('li').eq(i).addClass("ping move_left");
       } else if (array[i] === "ping-pong") {
         $('li').eq(i).text(array[i]).addClass("text_pingpong");
+        $('li').eq(i).addClass("pingpongAnim");
       } else {
         $('li').eq(i).text(array[i]);
     }
