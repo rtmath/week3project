@@ -8,9 +8,9 @@ $(document).ready(function() {
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
     var speed = parseInt(($('#speedSlider').val())) * -1;
-    $('._hidden').fadeIn().addClass('.list_center');
     if (withinRange(input) === true) {
       createList(pongifiedNumbers);
+      $('._hidden').fadeIn().addClass('.list_center');
       $('#output').text(displayCount(pongifiedNumbers));
       $("#output li").linearFadeIn(speed);
     } else {

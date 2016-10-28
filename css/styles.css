@@ -7,7 +7,6 @@ body {
 button {
   margin-top: 30px;
   margin-bottom: 30px;
-  /*background: rgba(153, 51, 255, 0.8);*/
 }
 
 li {
@@ -20,16 +19,11 @@ li {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
+  padding: 1px;
   min-width: 30px;
-  max-width: 50px;
+  max-width: 80px;
   margin-left: auto;
   margin-right: auto;
-}
-
-#sliderContainer {
-  /*background: linear-gradient(to right, rgba(0,0,0,1), rgba(153, 51, 255, 0.3),
-  rgba(0,0,0,1)), url('../img/blacktexture.jpg');*/
 }
 
 #userInput {
@@ -40,19 +34,12 @@ li {
   border: 0px solid white;
 }
 
-.form-group {
-  /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgba(255,255,255, 0.3)), color-stop(0.67, rgba(255, 255, 255, 0.8)));
-background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );
-padding: 5px;*/
+._hidden {
+  display: none;
 }
 
-/*ice blue = rgb(102, 204, 255)*/
-
-
-
 .jumbotron {
-  /*border-top: solid white;
-  border-bottom: solid white;*/
+  border-bottom: solid bottom;
   color: white;
   background: linear-gradient(transparent, rgba(153, 51, 255, 0.5), transparent);
   background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0, 0.5),
@@ -71,10 +58,6 @@ padding: 5px;*/
   padding-left: 0;
 }
 
-._hidden {
-  display: none;
-}
-
 .text_centered {
   text-align: center;
 }
@@ -88,11 +71,11 @@ padding: 5px;*/
 }
 
 .text_pong {
-  color: lightyellow;
+  color: lightgreen;
 }
 
 .text_pingpong {
-  color: lightgreen;
+  color: salmon;
 }
 
 .well {
@@ -103,6 +86,7 @@ padding: 5px;*/
   background: linear-gradient(to right,rgba(255,255,255, 0.3), transparent, transparent, transparent, transparent, transparent, rgba(255,255,255, 0.3));
 }
 
+/*------Animations------*/
 
 .move_left {
 border-left: 0px solid white;
@@ -111,13 +95,13 @@ animation-duration: 1s;
 animation-fill-mode: forwards;
 }
 @keyframes move_left {
-    0%   {transform: translate(-10px,0);}
-    /*25%  {transform: translate(-50px,0);}*/
-    35%  {transform: translate(-150px,0); border-width: 0px;}
-    50%  {transform: translate(-150px,0); border-width: 5px;}
-    65%  {transform: translate(-150px,0); border-width: 0px;}
-    /*75%  {transform: translate(-50px,0);}*/
-    100% {transform: translate(-0px,0);}
+    0%   {transform: translate(-10px,0); border-width: 0px;}
+    5%   {transform: translate(-10px,0); border-width: 0px;}
+    35%  {transform: translate(-150px,5px); border-width: 0px;}
+    50%  {transform: translate(-150px,7px); border-width: 5px;}
+    65%  {transform: translate(-150px,5px); border-width: 0px;}
+    95%   {transform: translate(-10px,0); border-width: 0px;}
+    100% {transform: translate(-0px,0); border-width: 0px;}
 }
 
 .move_right {
@@ -128,15 +112,14 @@ animation-fill-mode: forwards;
 }
 @keyframes move_right {
   0%   {transform: translate(10px,0);}
-  /*25%  {transform: translate(-50px,0);}*/
-  35%  {transform: translate(150px,0); border-width: 0px;}
-  50%  {transform: translate(150px,0); border-width: 5px;}
-  65%  {transform: translate(150px,0); border-width: 0px;}
-  /*75%  {transform: translate(-50px,0);}*/
+  35%  {transform: translate(150px,5px); border-width: 0px;}
+  50%  {transform: translate(150px,7px); border-width: 5px;}
+  65%  {transform: translate(150px,5px); border-width: 0px;}
   100% {transform: translate(0px,0);}
 }
 
 .pingpongAnimLeft {
+  border: 0px solid white;
   animation-name: pingpongAnimLeft;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
@@ -144,24 +127,33 @@ animation-fill-mode: forwards;
 }
 
 @keyframes pingpongAnimLeft {
-  0%   {transform: translate(0px,0);}
-  25%  {transform: translate(-150px,20px);}
-  50%  {transform: translate(0px,40px);}
-  75%  {transform: translate(150px,20px);}
-  100% {transform: translate(0px,0);}
+  0%   {transform: translate(0px,0); border-width: 0px;}
+  20%  {transform: translate(-150px,8px); border-width: 0px 0px 0px 0px;}
+  25%  {transform: translate(-150px,8px); border-width: 0px 0px 0px 5px;}
+  30%  {transform: translate(-150px,8px); border-width: 0px 0px 0px 0px;}
+  50%  {transform: translate(0px,16px); border-width: 0px;}
+  65%  {transform: translate(150px,8px); border-width: 0px 0px 0px 0px;}
+  75%  {transform: translate(150px,8px); border-width: 0px 5px 0px 0px;}
+  85%  {transform: translate(150px,8px); border-width: 0px 0px 0px 0px;}
+  100% {transform: translate(0px,0); border-width: 0px;}
 }
 
 .pingpongAnimRight {
+  border: 0px solid white;
   animation-name: pingpongAnimRight;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
 @keyframes pingpongAnimRight {
-  0%   {transform: translate(0px,0);}
-  25%  {transform: translate(150px,-20px);}
-  50%  {transform: translate(0px,-40px);}
-  75%  {transform: translate(-150px,-20px);}
-  100% {transform: translate(0px,0);}
+  0%   {transform: translate(0px,0); border-width: 0px;}
+  20%  {transform: translate(150px,-8px); border-width: 0px 0px 0px 0px;}
+  25%  {transform: translate(150px,-8px); border-width: 0px 5px 0px 0px;}
+  30%  {transform: translate(150px,-8px); border-width: 0px 0px 0px 0px;}
+  50%  {transform: translate(0px,16px); border-width: 0px;}
+  65%  {transform: translate(-150px,8px); border-width: 0px 0px 0px 0px;}
+  75%  {transform: translate(-150px,8px); border-width: 0px 0px 0px 5px;}
+  85%  {transform: translate(-150px,8px); border-width: 0px 0px 0px 0px;}
+  100% {transform: translate(0px,0); border-width: 0px;}
 }
