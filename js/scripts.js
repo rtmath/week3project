@@ -14,7 +14,7 @@ $(document).ready(function() {
       $('#output').text(displayCount(pongifiedNumbers));
       $("#output li").linearFadeIn(speed);
     } else {
-      alert("Number must be within range. Please enter a valid number between 1 and 1000.")
+      alert("Number must be within range. Please enter a valid number between 1 and 100.")
     }
   });
 });
@@ -54,7 +54,7 @@ function pongifyArray(array) {
 
 function createList(array) {
   for (var i = 0; i < array.length; i++) {
-      $('#list').append('<li></li>');
+      $('#list').append('<div class="bordered"><li></li></div>');
   }
 }
 
