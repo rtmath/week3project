@@ -6,9 +6,11 @@ $(document).ready(function() {
     var input = getInput(input);
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
+    var speed = parseInt(($('#speedSlider').val()));
+    console.log(speed);
     if (withinRange(input) === true) {
       $('#output').text(displayCount(pongifiedNumbers));
-      $("#output li").linearFadeIn(400);
+      $("#output li").linearFadeIn(speed);
     } else {
       alert("Number must be within range. Please enter a valid number between 1 and 1000.")
     }
@@ -59,7 +61,6 @@ $.fn.linearFadeIn = function(time) {
   var self = this;
 
   function next() {
-    console.log(index);
       if (index < self.length) {
           self.eq(index++).fadeIn(time, next);
       }

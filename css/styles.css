@@ -1,8 +1,8 @@
-/*body {
+body {
   background-color: black;
   height: 100%;
   width: 100%;
-}*/
+}
 
 .jumbotron {
   color: darkseagreen;
@@ -13,9 +13,9 @@
   text-align: center;
 }
 
-/*.text_white {
+.text_white {
   color: white;
-}*/
+}
 
 li {
   display: none;
