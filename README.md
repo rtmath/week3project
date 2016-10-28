@@ -8,7 +8,7 @@
 * Program will return a range of numbers from 1 to the user inputted number
   * Example Input: 5
   * Example Output: [1, 2, 3, 4, 5]
-* Each number returned to user will be instantiated on a new line, as if counting
+* Each number returned to user will be created on a new line, as if counting
 * Numbers divisible by 3 will be replaced with the word "ping"
  * Example Input: 4
  * Example Output: [1, 2, "ping", 4]

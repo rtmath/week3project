@@ -16,3 +16,7 @@
 /*.text_white {
   color: white;
 }*/
+
+li {
+  display: none;
+}
