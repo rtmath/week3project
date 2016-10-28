@@ -1,0 +1,18 @@
+/*body {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}*/
+
+.jumbotron {
+  color: darkseagreen;
+  background-color: seagreen;
+}
+
+.text_centered {
+  text-align: center;
+}
+
+.text_white {
+  color: white;
+}
