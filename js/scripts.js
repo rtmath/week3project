@@ -3,10 +3,12 @@ $(document).ready(function() {
   $('form#numInput').submit(function(event) {
     event.preventDefault();
     $('#list').empty();
+
     var input = getInput(input);
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
     var speed = parseInt(($('#speedSlider').val()));
+    $('._hidden').fadeIn();
     if (withinRange(input) === true) {
       createList(pongifiedNumbers);
       $('#output').text(displayCount(pongifiedNumbers));

@@ -4,9 +4,39 @@ body {
   width: 100%;
 }
 
+button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: rgba(153, 51, 255, 0.8);
+}
+
+.form-group {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, rgba(153, 51, 255, 0.3)), color-stop(0.67, rgba(153, 51, 255, 0.8)));
+background-image: -moz-linear-gradient(center bottom, rgb(14,173,173) 33%, rgb(0,255,255) 67% );
+padding: 5px;
+}
+
+/*ice blue = rgb(102, 204, 255)*/
+
+#userInput {
+  background: rgba(125, 225, 255, 0.2);
+}
+
 .jumbotron {
+  border-top: solid white;
+  border-bottom: solid linear-gradient(white, purple);
   color: darkseagreen;
-  background-color: seagreen;
+  background: rgba(153, 51, 255, 0.5);
+  /*background: linear-gradient(to right, rgba(255,255,255,0),
+  rgba(255,255,255,1)), url('../img/blacktexture.jpg');*/
+}
+
+._hidden {
+  display: none;
+}
+
+.placeholder {
+  color: white;
 }
 
 .text_centered {
@@ -27,6 +57,10 @@ body {
 
 .text_pingpong {
   color: lightblue;
+}
+
+.well {
+  background: rgba(153, 51, 255, 0.7);
 }
 
 li {

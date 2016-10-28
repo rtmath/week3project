@@ -18,9 +18,13 @@
           <div class="col-md-8">
             <form id="numInput" class="" action="index.html" method="post">
               <div class="form-group">
-                <label for="userInput">The magical ping-pong number counter:</label>
+                <!-- <label for="userInput">The magical ping-pong number counter:</label> -->
                 <input type="number" class="form-control" id="userInput" placeholder="Please enter a number between 1 and 1000">
-                <small id="inputHelp" class="form-text text-muted">We will count to your chosen number, with special effects for each number divisible by 3, 5 or 15.</small>
+                <!-- <small id="inputHelp" class="form-text text-muted">We will count to your chosen number, with special effects for each number divisible by 3, 5 or 15.</small> -->
+              </div>
+              <div>
+                <label class="text_white">Adjust Speed of Counting</label>
+                <input id="speedSlider" type="range" min="100" max="700" step="100"/>
               </div>
               <button type="submit" name="button" class="center-block">Submit!</button>
             </form>
@@ -30,17 +34,19 @@
       <div class="row"> <!--Row 2-->
         <div class="col-md-2"></div>
           <div class="col-md-8">
-            <input id="speedSlider" type="range" min="100" max="700" step="100"/>
+
           </div>
         <div class="col-md-2"></div>
       </div> <!--End Row 2-->
       <div class="row"> <!--Row 3-->
         <div class="col-md-2"></div>
           <div class="col-md-8">
-            <span id="output">
-              <ul id="list" class="text_white">
-              </ul>
-            </span>
+            <div class="well _hidden">
+              <span id="output">
+                <ul id="list" class="text_white">
+                </ul>
+              </span>
+            </div>
           </div>
         <div class="col-md-2"></div>
       </div> <!--End Row 3-->
