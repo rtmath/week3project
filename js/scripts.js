@@ -7,7 +7,7 @@ $(document).ready(function() {
     var input = getInput(input);
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
-    var speed = parseInt(($('#speedSlider').val()));
+    var speed = parseInt(($('#speedSlider').val())) * -1;
     $('._hidden').fadeIn().addClass('.list_center');
     if (withinRange(input) === true) {
       createList(pongifiedNumbers);
@@ -59,17 +59,24 @@ function createList(array) {
 }
 
 function displayCount(array) {
+  switchBit = 0;
   for (var i = 0; i < array.length; i++) {
     array[i] = array[i] + "";
       if (array[i] === "pong") {
         $('li').eq(i).text(array[i]).addClass("text_pong");
         $('li').eq(i).addClass("move_right");
       } else if  (array[i] === "ping") {
-        $('li').eq(i).text(array[i]);
+        $('li').eq(i).text(array[i]).addClass("text_ping");
         $('li').eq(i).addClass("ping move_left");
       } else if (array[i] === "ping-pong") {
-        $('li').eq(i).text(array[i]).addClass("text_pingpong");
-        $('li').eq(i).addClass("pingpongAnim");
+        if (switchBit === 0) {
+          $('li').eq(i).text(array[i]).addClass("text_pingpong");
+          $('li').eq(i).addClass("pingpongAnimLeft");
+        } else if (switchBit === 1) {
+          $('li').eq(i).text(array[i]).addClass("text_pingpong");
+          $('li').eq(i).addClass("pingpongAnimRight");
+        }
+        switchBit ^= 1;
       } else {
         $('li').eq(i).text(array[i]);
     }

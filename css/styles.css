@@ -69,11 +69,11 @@ padding: 5px;
 }
 
 .text_ping {
-  color: red;
+  color: lightblue;
 }
 
 .text_pong {
-  color: yellow;
+  color: lightyellow;
 }
 
 .text_pingpong {
@@ -95,9 +95,9 @@ animation-duration: 1s;
 animation-fill-mode: forwards;
 }
 @keyframes move_left {
-    0%   {transform: translate(-10px,0);}
+    0%   {transform: translate(-10px,-10px);}
     /*25%  {transform: translate(-50px,0);}*/
-    50%  {transform: translate(-150px,0);}
+    50%  {transform: translate(-150px,-20px);}
     /*75%  {transform: translate(-50px,0);}*/
     100% {transform: translate(-0px,0);}
 }
@@ -108,24 +108,39 @@ animation-duration: 1s;
 animation-fill-mode: forwards;
 }
 @keyframes move_right {
-    0%   {transform: translate(10px,0);}
+    0%   {transform: translate(10px,10px);}
     /*25%  {transform: translate(-50px,0);}*/
-    50%  {transform: translate(150px,0);}
+    50%  {transform: translate(150px,20px);}
     /*75%  {transform: translate(-50px,0);}*/
     100% {transform: translate(0px,0);}
 }
 
-.pingpongAnim {
-  animation-name: pingpongAnim;
+.pingpongAnimLeft {
+  animation-name: pingpongAnimLeft;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
-@keyframes pingpongAnim {
+@keyframes pingpongAnimLeft {
   0%   {transform: translate(0px,0);}
   25%  {transform: translate(-150px,20px);}
   50%  {transform: translate(0px,40px);}
   75%  {transform: translate(150px,20px);}
+  100% {transform: translate(0px,0);}
+}
+
+.pingpongAnimRight {
+  animation-name: pingpongAnimRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes pingpongAnimRight {
+  0%   {transform: translate(0px,0);}
+  25%  {transform: translate(150px,-20px);}
+  50%  {transform: translate(0px,-40px);}
+  75%  {transform: translate(-150px,-20px);}
   100% {transform: translate(0px,0);}
 }
