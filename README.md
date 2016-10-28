@@ -10,7 +10,7 @@ _You may also adjust the speed of the counting output._
 
 ### Github Pages
 
-_You can view the webpage [here](https://rtmath.github.io/week3project)._
+_You can view the webpage [here](https://rtmath.github.io/week3project/)._
 
 ### Setup/Installation Requirements
 
