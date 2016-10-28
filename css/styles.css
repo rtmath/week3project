@@ -17,6 +17,18 @@ body {
   color: white;
 }
 
+.text_ping {
+  color: red;
+}
+
+.text_pong {
+  color: yellow;
+}
+
+.text_pingpong {
+  color: lightblue;
+}
+
 li {
   display: none;
 }

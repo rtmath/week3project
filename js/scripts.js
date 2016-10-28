@@ -7,8 +7,8 @@ $(document).ready(function() {
     var numbers = getNumArray(input);
     var pongifiedNumbers = pongifyArray(numbers);
     var speed = parseInt(($('#speedSlider').val()));
-    console.log(speed);
     if (withinRange(input) === true) {
+      createList(pongifiedNumbers);
       $('#output').text(displayCount(pongifiedNumbers));
       $("#output li").linearFadeIn(speed);
     } else {
@@ -50,9 +50,24 @@ function pongifyArray(array) {
   return array;
 }
 
+function createList(array) {
+  for (var i = 0; i < array.length; i++) {
+      $('#list').append('<li></li>');
+  }
+}
+
 function displayCount(array) {
   for (var i = 0; i < array.length; i++) {
-    $('#list').append('<li>' + array[i] + '</li>');
+    array[i] = array[i] + "";
+      if (array[i] === "pong") {
+        $('li').eq(i).text(array[i]).addClass("text_pong");
+      } else if  (array[i] === "ping") {
+        $('li').eq(i).text(array[i]).addClass("text_ping");
+      } else if (array[i] === "ping-pong") {
+        $('li').eq(i).text(array[i]).addClass("text_pingpong");
+      } else {
+        $('li').eq(i).text(array[i]);
+    }
   }
 }
 
